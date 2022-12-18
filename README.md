@@ -1,27 +1,38 @@
 # Realty
+Simple CRUD application built in Angular over a two day period. The application helps you to find real estate and homes for sale in the United States.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.2.
+## Features
+- Search for a city or a neighbourhood using a text input with autocomplete.
+- Properties for sale in the searched area are displayed on Google maps.
+- Information for each property is displayed using cards.
+- Click on a marker to zoom to the corresponding card.
+- Dynamically filter properties by price. 
+- The zoom leve of the map is readjusted to cover all visible properties.
 
-## Development server
+## Tech Stack
+- TypeScript
+- Angular 15
+- SCSS
+- ESLint
+- Jest, Karma
+- Azure
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Requirements
+- NodeJS ^14.20.0 || ^16.13.0 || ^18.10.0
+- Angular CLI ~15.0.0
 
-## Code scaffolding
+## Running the application
+To run the application locally:
+- Install all the dependences with <code>npm install</code>.
+- Run <code>npm run start</code> or <code>ng server</code> for a dev server.
+- Navigate to <code>http://localhost:4200/</code>
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Running automated tests
+Run <code>npm run lint</code> or <code>ng lint</code> to execute the lint via ESLint.
 
-## Build
+Run <code>npm run test</code> or <code>ng test</code> to execute the unit tests via Karma.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Api
+Takes south-west corner and north-east corner as parameters and returns properties for sale in that area. For example
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+<code>https://realty-back-end.azurewebsites.net/api/property?topRight={%22lat%22:22.37,%22lng%22:-154.48}&bottomLeft={%22lat%22:18.55,%22lng%22:-160.53}</code>
