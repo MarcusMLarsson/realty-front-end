@@ -112,7 +112,7 @@ export class AppComponent implements AfterViewInit, OnInit, OnDestroy {
     bottomLeft: google.maps.LatLng
   ) {
     this.markerPositions = [];
-    //this.rangeSliderForm?.reset();
+    this.rangeSliderForm?.reset();
 
     this.propertyService
       .property(JSON.stringify(topRight), JSON.stringify(bottomLeft))
