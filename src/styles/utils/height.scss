@@ -1,0 +1,10 @@
+$steps: 100;
+
+@mixin height-classes {
+  @for $i from 1 through $steps {
+    .h-#{$i} {
+      height: #{$i}#{"%"};
+    }
+  }
+}
+@include height-classes;

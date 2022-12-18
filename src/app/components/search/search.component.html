@@ -1,0 +1,13 @@
+<mat-form-field class="example-form-field w-100">
+  <mat-label>Address, Neigborhood, City</mat-label>
+
+  <input
+    type="text"
+    (keydown.enter)="$event.preventDefault()"
+    placeholder="Search Location"
+    type="text"
+    #search
+    matInput
+  />
+  <mat-icon matSuffix>search</mat-icon>
+</mat-form-field>

@@ -1,0 +1,39 @@
+<div class="flex-row">
+  <ng-container *ngIf="properties && properties.length > 0">
+    <div class="ml-10">
+      <button mat-button [matMenuTriggerFor]="menuStatus">
+        Property status
+      </button>
+      <mat-menu #menuStatus="matMenu">
+        <button mat-menu-item>Work in progress</button>
+        <button mat-menu-item>Work in progress</button>
+      </mat-menu>
+    </div>
+    <div class="ml-5">
+      <button mat-button [matMenuTriggerFor]="menuType">Property type</button>
+      <mat-menu #menuType="matMenu">
+        <button mat-menu-item>Work in progress</button>
+        <button mat-menu-item>Work in progress</button>
+      </mat-menu>
+    </div>
+
+    <div class="ml-5">
+      <button mat-button [matMenuTriggerFor]="menuPrice">Property price</button>
+      <mat-menu #menuPrice="matMenu" class="mat-menu-price">
+        <div (click)="$event.stopPropagation()">
+          <form [formGroup]="rangeSliderForm">
+            <app-slider [rangeSliderForm]="rangeSliderForm"> </app-slider>
+          </form>
+        </div>
+      </mat-menu>
+    </div>
+
+    <div class="ml-5">
+      <button mat-button [matMenuTriggerFor]="menuArea">Property area</button>
+      <mat-menu #menuArea="matMenu">
+        <button mat-menu-item>Work in progress</button>
+        <button mat-menu-item>Work in progress</button>
+      </mat-menu>
+    </div>
+  </ng-container>
+</div>

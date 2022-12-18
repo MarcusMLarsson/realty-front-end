@@ -1,0 +1,173 @@
+// Font weights //--------------------------------------------------------------
+
+$fontweight-light: 300;
+$fontweight-regular: normal;
+$fontweight-medium: 500;
+$fontweight-semibold: 600;
+$fontweight-bold: 700;
+
+// Font families //-------------------------------------------------------------
+
+$fontfamily-montserrat: Montserrat, "Helvetica Neue", Helvetica, sans-serif;
+$fontfamily-roboto: Roboto, "Helvetica Neue", Helvetica, sans-serif;
+$fontfamily-roboto-light: Roboto-Light, $fontfamily-roboto;
+$fontfamily-roboto-medium: Roboto-Medium, Roboto, "Helvetica Neue", Helvetica,
+  sans-serif;
+
+// Common text styles //--------------------------------------------------------
+
+.text-heading-1,
+.text-heading-2,
+.text-heading-3,
+.text-heading-4,
+.text-heading-5,
+.text-ingress,
+.text-body-1,
+.text-body-2,
+.text-body-3 {
+  font-family: $fontfamily-roboto;
+  font-weight: $fontweight-regular;
+  font-variant-ligatures: common-ligatures;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+  color: #343a40;
+}
+
+// Heading text styles //-------------------------------------------------------
+
+.text-heading-1,
+.text-heading-2,
+.text-heading-3 {
+  font-family: $fontfamily-montserrat;
+}
+
+.text-heading-1 {
+  font-weight: $fontweight-bold;
+  font-size: 3.875rem;
+  letter-spacing: -3px;
+  line-height: 4.5rem;
+}
+
+h1.text-heading-1 {
+  margin: 1.5rem 0 3rem 0;
+}
+
+.text-heading-2 {
+  font-weight: fontweight-semibold;
+  font-size: 2.25rem;
+  letter-spacing: -0.4px;
+  line-height: 3rem;
+}
+
+h2.text-heading-2 {
+  margin: 3rem 0 1.5rem 0;
+}
+
+.text-heading-3 {
+  font-weight: fontweight-semibold;
+  font-size: 1.375rem;
+  line-height: 2rem;
+}
+
+h3.text-heading-3 {
+  margin: 0;
+  margin-top: 1.5rem;
+}
+
+.text-heading-4 {
+  font-family: $fontfamily-roboto-medium;
+  font-weight: $fontweight-medium;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.text-heading-5 {
+  font-family: $fontfamily-roboto-medium;
+  font-weight: $fontweight-medium;
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.1px;
+}
+
+h4.text-heading-4,
+h5.text-heading-5 {
+  margin: 1.5rem 0 0 0;
+}
+
+.text-ingress {
+  font-size: 1.75rem;
+  line-height: 2.5rem;
+}
+
+// Body text styles //----------------------------------------------------------
+
+.text-body-1 {
+  font-size: 1.25rem;
+  line-height: 2rem;
+}
+
+.text-body-2 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.text-body-3 {
+  font-size: 0.9rem;
+  line-height: 1rem;
+}
+
+p.text-body-1,
+p.text-body-2,
+p.text-body-3,
+p.text-ingress {
+  margin: 0 0 1.5rem 0;
+}
+
+// Subtitle text styles //------------------------------------------------------
+
+.text-subtitle-1 {
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  color: #73718a;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.text-subtitle-2 {
+  color: #73718a;
+  font-size: 0.9rem;
+  letter-spacing: 0.1px;
+  line-height: 1rem;
+}
+
+p.text-subtitle-1,
+p.text-subtitle-2 {
+  margin: 0;
+}
+
+// Text colors //--------------------------------------------------------------
+
+.text-secondary {
+  color: #73718a;
+}
+
+.text-inverted {
+  color: #ffffff;
+}
+
+.text-disabled {
+  color: #73718a;
+}
+
+.text-dim {
+  color: rgba(#73718a, 0.4);
+}
+
+.text-error {
+  color: #eb5e55;
+}
+
+.text-info {
+  color: #58b793;
+}

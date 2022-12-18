@@ -1,0 +1,25 @@
+.card-container {
+  height: 90vh;
+}
+
+.loader-container {
+  position: absolute;
+  position: fixed;
+  z-index: 99;
+}
+
+.loader-spinner {
+  z-index: 1031;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  z-index: 99;
+}
+
+.position-fixed {
+  position: absolute;
+  z-index: 999;
+  bottom: 1.25rem;
+  left: 30.5%;
+}

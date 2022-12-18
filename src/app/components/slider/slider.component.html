@@ -1,0 +1,51 @@
+<ng-container [formGroup]="rangeSliderForm" *ngIf="rangeSliderForm">
+  <div class="flex-column align-items-start w-100 ml-2">
+    <div class="mb-4">Use slider or enter min and max price</div>
+    <div class="flex-row justify-content-between align-items-center w-95">
+      from
+      <mat-form-field class="example-full-width w-40" appearance="outline">
+        <input
+          h-70
+          matInput
+          type="string"
+          formControlName="minPrice"
+          [value]="rangeSliderForm.value.minPrice"
+        />
+      </mat-form-field>
+
+      to
+
+      <mat-form-field class="example-full-width w-40" appearance="outline">
+        <input
+          h-70
+          type="string"
+          matInput
+          formControlName="maxPrice"
+          [value]="rangeSliderForm.value.maxPrice"
+        />
+      </mat-form-field>
+    </div>
+    <div class="flex-row w-97">
+      <mat-slider
+        tickInterval="3"
+        [displayWith]="formatLabel"
+        tick="100"
+        discrete
+        class="test"
+        min="0"
+        max="1000000"
+      >
+        <input
+          [value]="rangeSliderForm.value.minPrice"
+          matSliderStartThumb
+          formControlName="minPrice"
+        />
+        <input
+          [value]="rangeSliderForm.value.maxPrice"
+          matSliderEndThumb
+          formControlName="maxPrice"
+        />
+      </mat-slider>
+    </div>
+  </div>
+</ng-container>

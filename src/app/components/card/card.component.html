@@ -1,0 +1,29 @@
+<cdk-virtual-scroll-viewport itemSize="650" class="viewport">
+  <mat-card
+    *cdkVirtualFor="let property of filteredProperties"
+    class="example-card mat-elevation-z8"
+  >
+    <mat-card-header>
+      <img
+        mat-card-avatar
+        [src]="photos[0]"
+        onerror="imgPath"
+        alt="imgPath"
+        onerror="this.src='assets/logo/hawaii.jpg'"
+      />
+
+      <mat-card-title>{{ property.addressCity }}</mat-card-title>
+      <mat-card-subtitle>{{ property.addressStreet }}</mat-card-subtitle>
+    </mat-card-header>
+    <img
+      mat-card-image
+      [src]="property.imgSrc"
+      onerror="imgPath"
+      [alt]="imgPath"
+      onerror="this.src='assets/logo/hawaii.jpg'"
+    />
+    <mat-card-content
+      ><app-list [property]="property"> </app-list>
+    </mat-card-content>
+  </mat-card>
+</cdk-virtual-scroll-viewport>

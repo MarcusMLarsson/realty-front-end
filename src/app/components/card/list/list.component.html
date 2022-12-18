@@ -1,0 +1,67 @@
+<mat-list>
+  <div class="flex-row">
+    <button mat-icon-button class="mt-1">
+      <mat-icon matListAvatar>attach_money</mat-icon>
+    </button>
+    <mat-list-item>
+      <span matListItemTitle>
+        {{
+          property.unformattedPrice | currency : "USD" : "symbol" : "1.0-0"
+        }}</span
+      >
+      <span matListItemLine>
+        {{
+          property.unformattedPrice / property.area
+            | currency : "USD" : "symbol" : "1.0-0"
+        }}
+        / sqft
+      </span>
+    </mat-list-item>
+    <mat-list-item>
+      <span matListItemTitle>
+        {{ property.area | number : "1.0-0" || 0 }} sqft
+      </span>
+      <span matListItemLine>
+        {{ property.lotAreaRaw | number : "1.0-0" || 0 }} sqft
+      </span>
+    </mat-list-item>
+  </div>
+  <mat-divider></mat-divider>
+  <div class="flex-row">
+    <button mat-icon-button class="mt-1">
+      <mat-icon matListAvatar>call</mat-icon>
+    </button>
+    <mat-list-item>
+      <span matListItemTitle>san@gmail.com</span>
+      <span matListItemLine>(555) 555-1234</span>
+    </mat-list-item>
+    <mat-list-item>
+      <span matListItemTitle>{{
+        property.brokerName || "Cardinal Realty"
+      }}</span>
+      <span matListItemLine>Santos F. Knowles </span>
+    </mat-list-item>
+  </div>
+  <mat-divider></mat-divider>
+  <div class="flex-row">
+    <button mat-icon-button class="mt-1">
+      <mat-icon matListAvatar>bed</mat-icon>
+    </button>
+    <mat-list-item>
+      <span matListItemTitle>
+        {{ property.area | number : "1.0-0" || 0 }} sqft
+      </span>
+      <span matListItemLine>
+        {{ property.lotAreaRaw | number : "1.0-0" || 0 }}
+      </span>
+    </mat-list-item>
+    <mat-list-item>
+      <span matListItemTitle
+        >{{ property.beds | number : "1.0-0" || 0 }} beds</span
+      >
+      <span matListItemLine
+        >{{ property.beds | number : "1.0-0" || 0 }} baths
+      </span>
+    </mat-list-item>
+  </div>
+</mat-list>

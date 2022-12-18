@@ -1,0 +1,16 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.mat-toolbar {
+  background: #24292f;
+  color: #f7f9f9;
+  z-index: 100;
+  min-height: 10vh;
+}
+
+.icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  transform: scale(2);
+}

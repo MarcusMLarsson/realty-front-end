@@ -1,0 +1,60 @@
+<app-toolbar [rangeSliderForm]="rangeSliderForm" [properties]="properties">
+</app-toolbar>
+<div class="w-100 flex-row justify-content-center align-items-center">
+  <mat-progress-bar
+    *ngIf="loaderService.isLoading | async"
+    mode="indeterminate"
+    class="light-theme ml-1 mr-1 w-100"
+  ></mat-progress-bar>
+</div>
+<div class="flex-row light-theme">
+  <div
+    class="w-30 h-75 flex-column justify-content-flex-start align-items-start card-container"
+  >
+    <div *ngIf="(loaderService.isLoading | async) === false">
+      <div class="m-1">
+        <div *ngIf="!(filteredProperties && filteredProperties.length > 0)">
+          <div class="text-heading-2 ml-2">No properties found.</div>
+          <div class="text-heading-4 ml-2 mt-2">
+            Please search for a neighbourhood or city in the United States.
+          </div>
+          <div class="text-body-3 ml-2 mt-2">
+            This application displays properties for sale in the United States.
+            To search for properties, you need to use the autocomplete in the
+            the search bar. If you can't find any data, try to search for a big
+            city.
+          </div>
+          <br />
+        </div>
+        <app-card
+          [filteredProperties]="filteredProperties"
+          [idNumber]="idNumber"
+          [photos]="photos"
+        >
+        </app-card>
+      </div>
+    </div>
+  </div>
+  <div class="w-70 flex-row justify-content-flex-start align-items-start">
+    <span
+      *ngIf="filteredProperties && filteredProperties.length > 0"
+      class="text-heading-4 position-fixed"
+    >
+      #{{ filteredProperties.length | number : "1.0-0" || 0 }}
+    </span>
+    <app-map
+      [markerPositions]="markerPositions"
+      [center]="center"
+      [bounds]="bounds"
+      (id)="id($event)"
+    >
+    </app-map>
+    <app-slider></app-slider>
+  </div>
+  <div
+    class="w-30 h-100 flex-row justify-content-center align-items-center loader-container"
+    *ngIf="loaderService.isLoading | async"
+  >
+    <mat-spinner class="loader-spinner"> </mat-spinner>
+  </div>
+</div>

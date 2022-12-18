@@ -1,0 +1,10 @@
+$steps: 100;
+
+@mixin width-classes {
+  @for $i from 1 through $steps {
+    .w-#{$i} {
+      width: #{$i}#{"%"};
+    }
+  }
+}
+@include width-classes;
